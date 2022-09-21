@@ -1,14 +1,14 @@
-function darkMode(){
+function darkMode() {
     const body = document.querySelector('body');
     body.className = 'dark';
 }
 
-function lightMode(){
+function lightMode() {
     const body = document.querySelector('body');
     body.className = 'light';
 }
 
-function renderPublicRepoCount(userData){
+function renderPublicRepoCount(userData) {
     const count = userData.public_repos;
     const span = document.getElementById('repo-count');
     span.textContent = count;
@@ -17,12 +17,12 @@ function renderPublicRepoCount(userData){
     document.getElementById('name').value = ''
 };
 
-function renderName(name){
+function renderName(name) {
     const accountNameHolder = document.getElementById('account-name')
     accountNameHolder.textContent = name;
 }
 
-function renderError(err){
+function renderError(err) {
     const error = document.createElement('div');
     error.textContent = `Oh no! ${err}`;
     error.className = 'error';
@@ -30,7 +30,7 @@ function renderError(err){
     document.querySelector('header').appendChild(error);
 }
 
-function closeError(){
+function closeError() {
     const error = document.querySelector('.error');
     error.remove();
 }
