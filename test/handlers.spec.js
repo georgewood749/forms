@@ -18,4 +18,10 @@ describe('handlers', () => {
             expect(helpers.lightMode).toHaveBeenCalled();
         })
     });
+
+    describe('handleFormSubmit', () => {
+        const stubEvent = { preventDefault: jest.fn(), target: { name: { value: 'getfutureproof'}}}
+        handleFormSubmit(stubEvent);
+        //expect()
+    })
 })
